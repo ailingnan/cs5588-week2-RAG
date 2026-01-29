@@ -2,6 +2,8 @@
 Student: Ailing Nan
 Date: 01/29/2026
 
+---
+
 # Product Name: LegalClause Finder: Applied RAG for Legal Clause Search & Verification
 
 ## 1. Product Overview
@@ -21,6 +23,8 @@ Legal questions require exact grounding in authoritative documents. A standalone
 
 ### If the System Fails, Who Gets Hurt?
 If the system provides incorrect or hallucinated legal information, users may misunderstand their rights or obligations, potentially leading to legal, financial, or compliance-related harm.
+
+---
 
 ## 2. Dataset Reality
 ### Data Source & Ownership
@@ -44,7 +48,7 @@ In a real deployment, the system could manage hundreds to thousands of legal doc
 ## 3. User Stories & Risk Awareness
 
 ### U1 — Normal Use Case
-> As a ___, I want to ___ so that I can ___.
+> As a user, I want to find the relevant legal clause for a specific question so that I can understand the applicable law.
 
 **Acceptable Evidence:**  
 **Correct Answer Criteria:**  
