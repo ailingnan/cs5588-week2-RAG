@@ -1,12 +1,12 @@
 # cs5588-week2-Applied RAG for Product & Venture Development
-# Student: Ailing Nan
-# Date: 01/29/2026
+## Student: Ailing Nan
+## Date: 01/29/2026
 
 # Product Name: LegalClause Finder: Applied RAG for Legal Clause Search & Verification
 
 # 1. Product Overview
 ## Problem Statement
-# Legal documents such as statutes, regulations, and codes are long, complex, and difficult for non-experts to search accurately. Users often struggle to locate the exact legal clauses relevant to their questions, and generic AI chatbots may hallucinate or paraphrase legal language incorrectly, which can lead to serious misunderstandings.
+## Legal documents such as statutes, regulations, and codes are long, complex, and difficult for non-experts to search accurately. Users often struggle to locate the exact legal clauses relevant to their questions, and generic AI chatbots may hallucinate or paraphrase legal language incorrectly, which can lead to serious misunderstandings.
 
 ### Target Users
 Who will use this system in practice? (e.g., clinicians, analysts, compliance officers, educators, founders, NGOs, etc.)
