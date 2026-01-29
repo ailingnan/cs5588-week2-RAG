@@ -145,10 +145,11 @@ If deployed as-is, a tenant or landlord could rely on the wrong statute and misu
 ---
 
 ## 7. Evidence of Grounding
-Query:How much notice must a landlord give to terminate a tenancy in Missouri?
+### Query:How much notice must a landlord give to terminate a tenancy in Missouri?
 Answer:
->  Based on Missouri landlord–tenant statutes, a landlord may terminate a tenancy at will or by sufferance by giving the tenant written notice at least thirty days prior to the termination date.
-Citations: [mo-441.020]
+Based on Missouri landlord–tenant statutes, a landlord may terminate a tenancy at will or by sufferance by giving the tenant written notice at least thirty days prior to the termination date.
+Citations: 
+[mo-441.020]
 
 ---
 
