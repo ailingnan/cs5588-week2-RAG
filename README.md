@@ -5,7 +5,7 @@
 # Product Name: LegalClause Finder: Applied RAG for Legal Clause Search & Verification
 
 # 1. Product Overview
-## Problem Statement
+### Problem Statement
 ## Legal documents such as statutes, regulations, and codes are long, complex, and difficult for non-experts to search accurately. Users often struggle to locate the exact legal clauses relevant to their questions, and generic AI chatbots may hallucinate or paraphrase legal language incorrectly, which can lead to serious misunderstandings.
 
 ### Target Users
