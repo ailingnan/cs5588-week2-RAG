@@ -5,18 +5,24 @@
 # Product Name: LegalClause Finder: Applied RAG for Legal Clause Search & Verification
 
 # 1. Product Overview
-### Problem Statement
-## Legal documents such as statutes, regulations, and codes are long, complex, and difficult for non-experts to search accurately. Users often struggle to locate the exact legal clauses relevant to their questions, and generic AI chatbots may hallucinate or paraphrase legal language incorrectly, which can lead to serious misunderstandings.
+## Problem Statement
+### Legal documents such as statutes, regulations, and codes are long, complex, and difficult for non-experts to search accurately. Users often struggle to locate the exact legal clauses relevant to their questions, and generic AI chatbots may hallucinate or paraphrase legal language incorrectly, which can lead to serious misunderstandings.
 
-### Target Users
-Who will use this system in practice? (e.g., clinicians, analysts, compliance officers, educators, founders, NGOs, etc.)
+## Target Users
+### ·General public seeking to understand legal texts
+### ·Students studying law or public policy
+### ·Compliance analysts or non-legal professionals who need to reference legal clauses
 
-### Value Proposition
-Why would someone choose your AI system over existing tools, search engines, or manual workflows?
+## Value Proposition
+### LegalClause Finder helps users locate and cite authoritative legal clauses directly from source documents. Instead of providing legal advice, the system focuses on accurate retrieval, explicit citations, and safe abstention when evidence is insufficient, reducing the risk of misinformation compared to generic AI assistants.
 
----
+## Why AI + RAG Is Needed
+### Legal questions require exact grounding in authoritative documents. A standalone language model may fabricate or misinterpret clauses, while keyword search alone often fails due to complex legal language. Retrieval-Augmented Generation (RAG) enables the system to combine precise document retrieval with natural language explanations, while ensuring answers are evidence-based.
 
-## 2. Dataset Reality
+## If the System Fails, Who Gets Hurt?
+### If the system provides incorrect or hallucinated legal information, users may misunderstand their rights or obligations, potentially leading to legal, financial, or compliance-related harm.
+
+# 2. Dataset Reality
 ### Data Source & Ownership
 - Source:
 - Owner (public / company / agency / internal):
