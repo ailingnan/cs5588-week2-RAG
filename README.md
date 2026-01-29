@@ -7,6 +7,7 @@ Date: 01/29/2026
 # Product Name: LegalClause Finder: Applied RAG for Legal Clause Search & Verification
 
 ## 1. Product Overview
+
 ### Problem Statement
 Legal documents such as statutes, regulations, and codes are long, complex, and difficult for non-experts to search accurately. Users often struggle to locate the exact legal clauses relevant to their questions, and generic AI chatbots may hallucinate or paraphrase legal language incorrectly, which can lead to serious misunderstandings.
 
@@ -27,6 +28,7 @@ If the system provides incorrect or hallucinated legal information, users may mi
 ---
 
 ## 2. Dataset Reality
+
 ### Data Source & Ownership
 - Source: Publicly available legal documents (e.g., statutes, regulations, legal codes)
 - Owner: Government or public institutions
@@ -51,20 +53,39 @@ In a real deployment, the system could manage hundreds to thousands of legal doc
 > As a user, I want to find the relevant legal clause for a specific question so that I can understand the applicable law.
 
 **Acceptable Evidence:**  
+Direct citation of the relevant legal section
 **Correct Answer Criteria:**  
+Clause text is accurately retrieved and properly cited
 
 ### U2 — High-Stakes Case
-> As a ___, I want to ___ so that I can ___.
+> As a tenant, I want to verify eviction notice requirements so that I can avoid violating housing laws.
 
 **Why This Is High Risk:**  
+Incorrect information could lead to unlawful actions or legal disputes
 **Acceptable Evidence:**  
+Official statutory or regulatory language
 **Correct Answer Criteria:**  
+Only information directly supported by authoritative documents is presented
 
 ### U3 — Ambiguous / Failure Case
-> As a ___, I want to ___ so that I can ___.
+> As a user, I want to know whether a legal clause applies to my specific situation when the law is unclear.
 
 **What Could Go Wrong:**  
+The system may overgeneralize or apply a clause incorrectly
 **Safeguard Needed:**  
+The system must abstain and clearly state “Not enough evidence,” recommending consultation with a legal professional
+
+---
+
+## 4. Trust & Risk Mapping
+
+
+| Risk                 | Example Failure            | Real-World Consequence          | Safeguard Idea                            |
+| -------------------- | -------------------------- | ------------------------------- | ----------------------------------------- |
+| Hallucination        | Invented legal clause      | Legal or financial harm         | Force citation from source documents      |
+| Misinterpretation    | Overconfident paraphrasing | User takes incorrect action     | Restrict answers to retrieved evidence    |
+| Outdated Information | Old statute retrieved      | Non-compliance with current law | Source and date validation                |
+| Overreach            | System gives legal advice  | Ethical and legal liability     | Explicit disclaimer and abstention policy |
 
 ---
 
