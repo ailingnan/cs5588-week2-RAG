@@ -4,112 +4,113 @@ Date: 01/29/2026
 
 ---
 
-# Product Name: LegalClause Finder: Applied RAG for Legal Clause Search & Verification
+# Product Name: LegalClause Finder: Missouri Landlord–Tenant Law Clause Search & Verification
 
 ## 1. Product Overview
 
 ### Problem Statement
-Legal documents such as statutes, regulations, and codes are long, complex, and difficult for non-experts to search accurately. Users often struggle to locate the exact legal clauses relevant to their questions, and generic AI chatbots may hallucinate or paraphrase legal language incorrectly, which can lead to serious misunderstandings.
+Missouri landlord–tenant laws are distributed across lengthy statutes and legal codes that are difficult for non-experts to navigate. Tenants and landlords often struggle to locate the exact legal clauses governing issues such as eviction notices, security deposits, and tenant rights. Generic AI chatbots may hallucinate, paraphrase inaccurately, or apply laws from the wrong jurisdiction, which can lead to serious legal misunderstandings.
 
 ### Target Users
-- General public seeking to understand legal texts
-- Students studying law or public policy
-- Compliance analysts or non-legal professionals who need to reference legal clauses
+- Missouri tenants seeking to understand housing-related legal obligations
+- Missouri landlords needing to reference statutory requirements
+- Students studying housing policy or state law
+- Non-legal professionals requiring accurate citation of Missouri landlord–tenant statutes
 
 ### Value Proposition
-LegalClause Finder helps users locate and cite authoritative legal clauses directly from source documents. Instead of providing legal advice, the system focuses on accurate retrieval, explicit citations, and safe abstention when evidence is insufficient, reducing the risk of misinformation compared to generic AI assistants.
+LegalClause Finder helps users locate, verify, and cite authoritative Missouri landlord–tenant legal clauses directly from official statutory sources. Rather than offering legal advice, the system focuses on precise clause-level retrieval, explicit citations, and safe abstention when legal applicability is unclear, reducing the risk of misinformation compared to generic AI assistants.
 
 ### Why AI + RAG Is Needed
-Legal questions require exact grounding in authoritative documents. A standalone language model may fabricate or misinterpret clauses, while keyword search alone often fails due to complex legal language. Retrieval-Augmented Generation (RAG) enables the system to combine precise document retrieval with natural language explanations, while ensuring answers are evidence-based.
+Legal questions require jurisdiction-specific grounding in authoritative legal texts. A standalone language model may fabricate clauses or incorrectly generalize laws across states, while keyword search alone often fails due to complex statutory language. Retrieval-Augmented Generation (RAG) enables accurate retrieval of Missouri-specific legal clauses and supports natural language explanations grounded strictly in source documents.
 
 ### If the System Fails, Who Gets Hurt?
-If the system provides incorrect or hallucinated legal information, users may misunderstand their rights or obligations, potentially leading to legal, financial, or compliance-related harm.
+If the system provides incorrect or hallucinated Missouri landlord–tenant legal information, users may misunderstand their legal rights or obligations, potentially resulting in unlawful eviction actions, financial penalties, or legal disputes.
 
 ---
 
 ## 2. Dataset Reality
 
 ### Data Source & Ownership
-- Source: Publicly available legal documents (e.g., statutes, regulations, legal codes)
-- Owner: Government or public institutions
+- Source: Publicly available Missouri statutes related to landlord–tenant law
+- Owner: State of Missouri (government-published legal documents)
 
 ### Sensitivity & Ethics
 - Sensitivity level: Public but high-stakes
-- Ethical Considerations: Although the data is public, legal text must be interpreted carefully. The system must avoid presenting itself as legal advice and should clearly communicate uncertainty when applicable.
+- Ethical Considerations: Although Missouri statutes are publicly accessible, incorrect interpretation or overconfident summarization may cause legal harm. The system must clearly avoid presenting legal advice and must communicate uncertainty when evidence is insufficient.
 
 ### Document Types
-- Statutory texts
-- Regulatory documents
-- Legal codes and sections
+- Missouri statutory texts
+- Landlord–tenant law sections and clauses
+- Official legal code documents
 
 ### Expected Scale in Production
-In a real deployment, the system could manage hundreds to thousands of legal documents, depending on jurisdiction and domain scope.
+In a realistic deployment, the system would manage hundreds of Missouri landlord–tenant legal clauses, maintaining a controlled and jurisdiction-specific dataset.
 
 ---
 
 ## 3. User Stories & Risk Awareness
 
 ### U1 — Normal Use Case
-> As a user, I want to find the relevant legal clause for a specific question so that I can understand the applicable law.
+> As a Missouri tenant, I want to find the relevant legal clause related to housing requirements so that I can understand my rights and responsibilities.
 
 **Acceptable Evidence:**  
-Direct citation of the relevant legal section
+Direct citation of the relevant Missouri statutory clause
 **Correct Answer Criteria:**  
-Clause text is accurately retrieved and properly cited
+The clause is accurately retrieved, clearly cited, and jurisdiction-specific.
 
 ### U2 — High-Stakes Case
-> As a tenant, I want to verify eviction notice requirements so that I can avoid violating housing laws.
+> As a Missouri tenant, I want to verify eviction notice requirements so that I can avoid unlawful eviction or legal disputes.
 
 **Why This Is High Risk:**  
-Incorrect information could lead to unlawful actions or legal disputes
+Incorrect information could result in illegal eviction actions or legal consequences.
 **Acceptable Evidence:**  
-Official statutory or regulatory language
+Official Missouri landlord–tenant statutory language
 **Correct Answer Criteria:**  
-Only information directly supported by authoritative documents is presented
+Only information explicitly supported by Missouri legal statutes is presented.
 
 ### U3 — Ambiguous / Failure Case
-> As a user, I want to know whether a legal clause applies to my specific situation when the law is unclear.
+> As a user, I want to know whether a Missouri landlord–tenant legal clause applies to my specific situation when statutory language is unclear or conditional.
 
 **What Could Go Wrong:**  
-The system may overgeneralize or apply a clause incorrectly
+The system may overgeneralize legal applicability or provide misleading certainty.
 **Safeguard Needed:**  
-The system must abstain and clearly state “Not enough evidence,” recommending consultation with a legal professional
+The system must abstain and clearly respond with “Not enough evidence”, recommending consultation with official Missouri legal resources or a qualified legal professional.
 
 ---
 
-## 4. Trust & Risk Mapping
+## 4-1. Trust & Risk Mapping
 
-
-| Risk                 | Example Failure            | Real-World Consequence          | Safeguard Idea                            |
-| -------------------- | -------------------------- | ------------------------------- | ----------------------------------------- |
-| Hallucination        | Invented legal clause      | Legal or financial harm         | Force citation from source documents      |
-| Misinterpretation    | Overconfident paraphrasing | User takes incorrect action     | Restrict answers to retrieved evidence    |
-| Outdated Information | Old statute retrieved      | Non-compliance with current law | Source and date validation                |
-| Overreach            | System gives legal advice  | Ethical and legal liability     | Explicit disclaimer and abstention policy |
+| Risk                 | Example Failure                | Real-World Consequence            | Safeguard Idea                                 |
+| -------------------- | ------------------------------ | --------------------------------- | ---------------------------------------------- |
+| Hallucination        | Invented Missouri legal clause | Legal or financial harm           | Force citation from official Missouri statutes |
+| Misinterpretation    | Overconfident paraphrasing     | User takes incorrect legal action | Restrict answers to retrieved clauses          |
+| Outdated Information | Superseded statute retrieved   | Non-compliance with current law   | Source validation and statute date checks      |
+| Overreach            | System provides legal advice   | Ethical and legal liability       | Explicit disclaimer and abstention policy      |
 
 ---
 
-## 4. System Architecture (Product View)
+## 4-2. System Architecture (Product View)
 
 ### Chunking Strategy
-- Fixed or Semantic:
-- Chunk size / overlap:
-- Why this fits your product users:
+- Fixed or Semantic: Semantic, clause-level chunking
+- Chunk size / overlap: One Missouri landlord–tenant legal clause per chunk, including statute and section metadata (no overlap)
+- Why this fits your product users: Missouri statutes are structured around sections and clauses. Clause-level chunking ensures precise, citable, and jurisdiction-specific retrieval, minimizing ambiguity and reducing hallucination risk.
 
 ### Retrieval Design
-- Keyword layer (TF-IDF / BM25):
-- Vector layer (embedding model + index):
-- Hybrid α value(s):
+- Keyword layer (TF-IDF / BM25): BM25
+- Vector layer (embedding model + index): Sentence-level embeddings with FAISS index
+- Hybrid α value(s): α = 0.5 (balanced keyword and semantic retrieval)
+**Design rationale:**
+Keyword retrieval captures exact statutory terms, while vector retrieval supports semantically phrased user queries. Hybrid retrieval balances precision and recall, reducing the risk of missing relevant Missouri landlord–tenant clauses due to phrasing differences.
 
 ### Governance Layer
-- Re-ranking method (Cross-Encoder / LLM Judge / None):
-- What risk this layer reduces:
+- Re-ranking method: Cross-encoder re-ranking
+- What risk this layer reduces: This layer reduces hallucination and jurisdiction mismatch by prioritizing Missouri-specific legal clauses that are most semantically aligned with the user query.
 
 ### Generation Layer
-- Model used:
-- Grounding & citation strategy:
-- Abstention policy (“Not enough evidence” behavior):
-
+- Model used: Large Language Model (LLM) used strictly for evidence-grounded synthesis
+- Grounding & citation strategy: The LLM is constrained to generate answers solely from retrieved and re-ranked Missouri landlord–tenant clauses, with explicit clause-level citations.
+- Abstention policy (“Not enough evidence” behavior): If retrieved evidence is insufficient, outdated, or ambiguous, the system explicitly responds with “Not enough evidence” and advises users to consult official Missouri legal resources or a qualified legal professional.
 ---
 
 ## 5. Results
