@@ -1,41 +1,43 @@
 # cs5588-week2-Applied RAG for Product & Venture Development
-## Student: Ailing Nan
-## Date: 01/29/2026
+Student: Ailing Nan
+Date: 01/29/2026
 
 # Product Name: LegalClause Finder: Applied RAG for Legal Clause Search & Verification
 
-# 1. Product Overview
+## 1. Product Overview
 ### Problem Statement
 Legal documents such as statutes, regulations, and codes are long, complex, and difficult for non-experts to search accurately. Users often struggle to locate the exact legal clauses relevant to their questions, and generic AI chatbots may hallucinate or paraphrase legal language incorrectly, which can lead to serious misunderstandings.
 
-## Target Users
+### Target Users
 - General public seeking to understand legal texts
 - Students studying law or public policy
 - Compliance analysts or non-legal professionals who need to reference legal clauses
 
-## Value Proposition
+### Value Proposition
 LegalClause Finder helps users locate and cite authoritative legal clauses directly from source documents. Instead of providing legal advice, the system focuses on accurate retrieval, explicit citations, and safe abstention when evidence is insufficient, reducing the risk of misinformation compared to generic AI assistants.
 
-## Why AI + RAG Is Needed
-### Legal questions require exact grounding in authoritative documents. A standalone language model may fabricate or misinterpret clauses, while keyword search alone often fails due to complex legal language. Retrieval-Augmented Generation (RAG) enables the system to combine precise document retrieval with natural language explanations, while ensuring answers are evidence-based.
+### Why AI + RAG Is Needed
+Legal questions require exact grounding in authoritative documents. A standalone language model may fabricate or misinterpret clauses, while keyword search alone often fails due to complex legal language. Retrieval-Augmented Generation (RAG) enables the system to combine precise document retrieval with natural language explanations, while ensuring answers are evidence-based.
 
-## If the System Fails, Who Gets Hurt?
-### If the system provides incorrect or hallucinated legal information, users may misunderstand their rights or obligations, potentially leading to legal, financial, or compliance-related harm.
+### If the System Fails, Who Gets Hurt?
+If the system provides incorrect or hallucinated legal information, users may misunderstand their rights or obligations, potentially leading to legal, financial, or compliance-related harm.
 
-# 2. Dataset Reality
+## 2. Dataset Reality
 ### Data Source & Ownership
-- Source:
-- Owner (public / company / agency / internal):
+- Source: Publicly available legal documents (e.g., statutes, regulations, legal codes)
+- Owner: Government or public institutions
 
 ### Sensitivity & Ethics
-- Sensitivity level (public / internal / regulated / confidential):
-- Privacy / compliance concerns:
+- Sensitivity level: Public but high-stakes
+- Ethical Considerations: Although the data is public, legal text must be interpreted carefully. The system must avoid presenting itself as legal advice and should clearly communicate uncertainty when applicable.
 
 ### Document Types
-- Examples: policies, manuals, research, reports, SOPs, meeting notes, etc.
+- Statutory texts
+- Regulatory documents
+- Legal codes and sections
 
 ### Expected Scale in Production
-- How many documents would this system realistically manage?
+In a real deployment, the system could manage hundreds to thousands of legal documents, depending on jurisdiction and domain scope.
 
 ---
 
